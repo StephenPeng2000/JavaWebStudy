@@ -1,0 +1,26 @@
+#box{
+    margin-left:  35%;
+    margin-right: 35%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#title{
+    font-size: 18px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#p1{
+    font-size: 18px;
+    font: bolder;
+}
+
+#p2{
+    color: red;
+    font-size: 25px;
+}
+
+#p3{
+    font-size: 30px;
+}

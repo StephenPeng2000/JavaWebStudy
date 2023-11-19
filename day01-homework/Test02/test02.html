@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test02</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <form action="#" method="post">
+      <label for="name" class="text1">姓名:</label><input type="text" id="name" placeholder="请输入姓名" /><br>
+      <label for="tel" class="text1">手机:</label><input type="text" id="tel" placeholder="请输入手机号"/><br>
+      <label for="gender" class="text1">性别:</label>
+      <input type="radio" name="gender" id="1"><label for="1">男</label>
+      <input type="radio" name="gender" id="2"><label for="2">女</label>
+      <input type="radio" name="gender" id="0"><label for="0">未知</label><br>
+      <label for="age" class="text1">年龄:</label><input type="text" id="age" placeholder="请输入年龄"><br>
+      <label for="qq" class="text1">QQ:</label><input type="text" id="qq" placeholder="请输入QQ号"><br>
+      <label for="subject">学科:</label>
+      <select name="subject" >
+        <option value="">请选择意向学科</option>
+        <option value="">Java</option>
+        <option value="">前端</option>
+        <option value="">大数据</option>
+        <option value="">测试</option>
+        <option value="">python</option>
+        <option value="">go</option>
+      </select><br>
+      <label for="way">渠道:</label>
+      <select name="way">
+        <option value="online">请选择渠道</option>
+        <option value="online">线上活动</option>
+        <option value="onsite">推广介绍</option>
+      </select><br>
+      <textarea name="note" id="note" cols="30" rows="10" placeholder="请输入备注"></textarea><br>
+      <input type="reset">
+      <input type="submit">
+    </form>
+  </body>
+</html>
