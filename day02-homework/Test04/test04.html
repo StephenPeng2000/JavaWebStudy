@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      /**
+       * 股票价格筛选函数
+       * @param {Array} prices - 包含股票价格的数组
+       * @param {number} threshold - 筛选条件，低于该阈值的价格将被筛选出来
+       * @returns {Array} - 符合条件的股票价格数组
+       */
+      let prices = [100, 98, 89, 69, 108, 92, 90, 87];
+      console.log("原股票数组：" + prices);
+      let condition = 90;
+      console.log("筛选条件：" + condition);
+      let result = stockPriceFilter(prices,condition);
+      console.log("筛选后数组：" + result)
+      
+      function stockPriceFilter(prices, condition) {
+        let result = prices.filter((x) => x >= condition).sort((o1, o2) => o1 - o2);
+        return result;
+      }
+    </script>
+  </body>
+</html>

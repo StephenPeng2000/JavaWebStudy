@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 在一个电子商务网站上，你希望在用户浏览产品时展示一个弹出窗口广告。你可以利用JavaScript的`window`对象的`open`方法和`location`对象来实现这个功能。
+    1.编写一个函数`showPopupAd(url, width, height)`，接收一个广告页面的URL、弹出窗口的宽度和高度作为参数。
+    2.使用window对象中的属性innerWidth innerHeight 分别获取返回窗口的文档显示区的宽度和高度来计算新弹窗口在页面的位置
+    3.在用户浏览产品的过程中，调用`window`对象的`open`方法打开一个新窗口，并将其定位到指定的URL。 -->
+    <script>
+      showPopupAd("https://www.baidu.com/", 520, 520);
+      function showPopupAd(url, width, height) {
+        let windowFeatures = `width=${width},height=${height}`;
+        window.open(url, "PopupAd", windowFeatures);
+      }
+    </script>
+  </body>
+</html>

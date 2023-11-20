@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>作业2</title>
+  </head>
+  <body>
+    <span id="time">5</span>秒之后跳转到官网首页
+    <script>
+      //实现5秒倒计时之后，跳转到官网首页 【注意：需要实现倒计时功能】
+      let number = 4;
+      setInterval(function () {
+        document.getElementById("time").innerHTML = number;
+        number = number - 1;
+      }, 1000);
+
+      setTimeout(function () {
+        location.href = "https://www.itcast.cn";
+      }, 5000);
+    </script>
+  </body>
+</html>

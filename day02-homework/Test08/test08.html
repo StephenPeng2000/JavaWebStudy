@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>常见事件案例</title>
+  </head>
+  <body>
+    <img id="light" src="../img/off.gif" /> <br />
+    <!--
+        点击点亮按钮调用on函数
+     -->
+    <input type="button" value="点亮" onclick="on()" />
+    <!--
+         点击熄灭按钮调用off函数
+     -->
+    <input type="button" value="熄灭" onclick="off()" />
+
+    <br />
+    <br />
+    <!--
+        onblur="b()" 表示失去焦点执行的事件是onblur，失去焦点就会调用b()函数
+        onfocus="f()" 表示获取焦点执行的事件是onfocus，获取焦点就会调用f()函数
+      -->
+    <input type="text" id="name" value="ITCAST" onblur="b()" onfocus="f()" />
+    <br />
+    <br />
+
+    <input type="checkbox" name="hobby" /> 电影
+    <input type="checkbox" name="hobby" /> 旅游
+    <input type="checkbox" name="hobby" /> 游戏
+    <br />
+    <!--
+            单击全选按钮执行checkAll函数
+       -->
+    <input type="button" value="全选" onclick="checkAll()" />
+    <!--
+            单击反选按钮执行reverse函数
+    -->
+    <input type="button" value="反选" onclick="reverse()" />
+  </body>
+  <script>
+    function checkAll() {
+      let tools = document.getElementsByTagName("input");
+      for (t of tools) {
+        t.checked = true;
+      }
+    }
+
+    function reverse() {
+      let tools = document.getElementsByTagName("input");
+      for (t of tools) {
+        t.checked = false;
+      }
+    }
+
+    function on() {
+      document.getElementById("light").src = "../img/on.gif";
+    }
+
+    function off() {
+      document.getElementById("light").src = "../img/off.gif";
+    }
+  </script>
+</html>

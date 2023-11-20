@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <!-- 假设你正在开发一个商品分类管理系统，需要实现以下功能：
+        1. 创建一个商品对象，包含商品的名称、价格和分类信息。
+        2. 将商品对象转换为 JSON 格式的字符串，并发送到服务器保存。这里咱们暂时输出到浏览器控制台即可。
+        3. 从服务器读取 JSON 格式的字符串，并将其转换为商品对象。直接将第二步的 JSON 格式的字符串转换即可
+        请你根据以上需求完成以下任务：
+        1. 定义一个自定义对象 `product`，包含 `name`、`price` 和 `category` 属性。
+        2. 使用 `JSON.stringify` 方法将商品对象转换为 JSON 字符串，并输出到浏览器控制台。
+        3. 将上述的 JSON 字符串，使用 `JSON.parse` 方法将其转换为商品对象。 -->
+  <body>
+    <script>
+      let product = {
+        name: "apple",
+        price: 10,
+        category: "fruit",
+      };
+      let jsonObject = JSON.stringify(product);
+      console.log(jsonObject);
+      let object = JSON.parse(jsonObject);
+      console.log(object);
+    </script>
+  </body>
+</html>

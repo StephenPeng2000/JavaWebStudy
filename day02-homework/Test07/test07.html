@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <!-- img标签引入的就是灯泡图片 off.gif 表示灰色的灯泡图片 on.gif表示黄色的灯泡图片，这里就是将off.gif图片替换成on.gif图片-->
+    <img id="light" src="../img/off.gif"> <br>
+
+    <div class="cls">传智教育</div>   <br>
+    <div class="cls">黑马程序员</div> <br>
+
+    <input type="checkbox" name="hobby"> 电影
+    <input type="checkbox" name="hobby"> 旅游
+    <input type="checkbox" name="hobby"> 游戏
+    <br>
+
+</body>
+<script>
+    //复选框选中
+    let tools = document.getElementsByTagName("input");
+    for (t of tools) {
+        t.checked = true;
+    }
+</script>
+</html>
