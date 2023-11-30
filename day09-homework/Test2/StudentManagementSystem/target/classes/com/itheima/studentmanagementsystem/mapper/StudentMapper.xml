@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+映射文件
+namespace 指定接口的类全名
+-->
+<mapper namespace="com.itheima.studentmanagementsystem.mapper.StudentMapper">
+    <!--
+    查询语句
+    id: 接口中方法的名字
+    resultType：返回的实体类的类型，类全名
+    -->
+
+    <insert id="addStudent">
+        insert into student (id, name, age, gender) VALUES (#{id},#{name},#{age},#{gender})
+    </insert>
+    <update id="updateStudent">
+        update student
+        <set>
+            <if test="name != null and name.trim() != ''">
+                name = #{name},
+            </if>
+            <if test="age != null">
+                age = #{age},
+            </if>
+            <if test="gender != null">
+                gender = #{gender},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteStudent">
+        delete from student where id = #{id};
+    </delete>
+
+    <select id="queryAllStudents" resultType="com.itheima.studentmanagementsystem.pojo.Student">
+        select * from student
+    </select>
+
+</mapper>
